@@ -8,6 +8,7 @@ import { useStateContext } from '../contexts/ContextProvider';
 
 
 const Ecommerce = () => {
+  const { currentColor }  = useStateContext();
   return (
     <div className='mt-12'>
       <div className='flex flex-wrap
@@ -31,7 +32,7 @@ const Ecommerce = () => {
           <div className='mt-6'>
             <Button
               color="white"
-              bgColor="blue"
+              bgColor={{ backgroundColor: currentColor }}
               text="Download"
               borderRadius="10px"
               size="md"
